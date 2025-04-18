@@ -86,7 +86,7 @@ class requisitionsystem:
         pending=requisitionsystem.pending
         notapproved=requisitionsystem.noapproved
         print(f"\n\n\n\n\nDisplaying the Booking Statistics:\nThe total number of bookings submitted: {totalbook}\nThe total number of approved bookings: {approved}\nThe total number of pending bookings: {pending}\nThe total number of not approved bookings: {notapproved}")
-
+#In this line below I  did not follow the DRY(Don't Repeat Yourself) because I used the calling of four methods two times rather than recalling them manually I could have used a simple while loop where users can call the methods as many times as they want
 passenger1 = requisitionsystem()
 passenger1.get_customer_details()
 passenger1.record_ferry_items()
