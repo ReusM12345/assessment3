@@ -1,5 +1,5 @@
-class requisitionsystem:
-    
+class requisitionsystem:#creation of a new class called requisition system it will house all the methods for a ferry booking system
+    #initialization of variables or attributes for the later use 
     totalbookings=2
     approved=0
     pending=2
@@ -35,7 +35,7 @@ class requisitionsystem:
         total=self.total
         print("At least one item with price should be entered for the code to run properly.")
         
-        while True:
+        while True:#this loop asks the user for their order as long as they want 
             print("If you have given the order, just press Enter to leave.")
             itemname=input("Enter the name of the product: ").strip()
             if not itemname:
@@ -43,12 +43,12 @@ class requisitionsystem:
             try:
                 itemprice=float(input("Enter the price: $"))
                 total=total+itemprice
-            except ValueError:
+            except ValueError:#this is used to display an error that the user have typed letter and not a number it apperas if a string is typed
                 print("Invalid input! Please type a number.")#cleancode:this principle is used in this beacause is a simple way to give an error message 
         print(f"Total price: ${total:.2f}")
         self.total=total
 
-    def ferry_service_total(self):
+    def ferry_service_total(self):#this method gives the decision to whether approve or not approve a ticked, calculates the number of approved and not approved tickets and provides a unique ticketid to thepassenger
         self.status="pending"
         status=self.status
         total=self.total
